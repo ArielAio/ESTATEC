@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background: #FFFFFF;
+}
+
+/*-------MAIN--------*/
+
+.main{
+    padding-top: 8rem;
+    
+}
+
+.main-title{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-left: 20rem;
+    color: white;
+}
+
+.main-subtitle{
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rem;
+    color: white;
+}
+
+.requisito-imobiliaria{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rem;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.descricao-imobiliaria{
+    display: flex;
+    flex-direction: column;
+    margin-left: 21.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.section-imobiliaria{
+    background-image: url(../images/real-estate-agent-handing-house-key_53876-146085.jpg);
+    background-size: cover;
+    width: 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    padding: 0.3rem;
+    width: 100%;
+    align-items: center;
+    height: 8%;
+    position: fixed;
+}
+
+.header-img {
+    height: 4rem;
+    margin: 1rem;
+    margin-left: 20rem;
+}
+
+.header-estatec {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+}
+
+/*----BOTÃO-------*/
+
+.botao-div {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0.5rem;
+    margin-left: 35%;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.botao-div:visited {
+    text-decoration: none;
+}
+
+.header-botao-inicio {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.header-botao-inicio:hover {
+    transform: scale(101%);
+    border-bottom: solid 1px black;
+    cursor: pointer;
+}
+
+.header-botao-estagios {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+.header-botao-estagios:hover {
+    transform: scale(102%);
+    border-bottom: solid 1px black;
+}
+
+.header-botao-sobre {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+.header-botao-sobre:hover {
+    transform: scale(102%);
+    border-bottom: solid 1px black;
+}
+
+.header-botao-perfil {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    background-color: #E63D3D;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 px 2px 0px 0px rgba(0, 0, 0, 0.5);
+    ;
+}
+
+.header-botao-perfil:hover {
+    transform: scale(102%);
+}
+
+.links:active {
+    border-bottom: solid 1px black;
+    color: gray;
+}
