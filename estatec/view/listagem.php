@@ -7,8 +7,6 @@ $query_cadastros = mysqli_query($connx, $buscar_cadastro);
 
 ?>
 
-
-
 <!doctype html>
 <html lang="pt-BR">
 

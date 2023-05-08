@@ -3,7 +3,7 @@
 include 'conexao.php';
 
 $buscar_cadastro = 'SELECT * FROM usuarios';
-$query_cadastros = mysqli_query($connx, $buscar_cadastro);
+$query_cadastros = mysqli_query($conn, $buscar_cadastro);
 
 ?>
 
@@ -26,25 +26,25 @@ $query_cadastros = mysqli_query($connx, $buscar_cadastro);
     </div>
     <div class="form">
 
-      <form action="#">
+      <form action="cadastro.php" method="post">
         <div class="form-header">
           <div class="title">
             <h1>Cadastre-se</h1>
           </div>
           <div class="login-button">
-            <button><a href="#">Entrar</a></button>
+            <button><a href="login.php">Entrar</a></button>
           </div>
         </div>
 
         <div class="input-group">
             <div class="input-box">
-                <label for="firstname">Primeiro Nome</label>
-                <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                <label for="nome">Primeiro Nome</label>
+                <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" required>
             </div>
 
             <div class="input-box">
-                <label for="lastname">Sobrenome</label>
-                <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                <label for="ultimonome">Sobrenome</label>
+                <input id="ultimonome" type="text" name="ultimonome" placeholder="Digite seu sobrenome" required>
             </div>
 
             <div class="input-box">
@@ -54,27 +54,28 @@ $query_cadastros = mysqli_query($connx, $buscar_cadastro);
 
             <div class="input-box">
                 <label for="number">RM</label>
-                <input id="number" type="text" name="number" placeholder="Digite seu RM" required>
+                <input id="rm" type="text" name="rm" placeholder="Digite seu RM" required>
             </div>
 
             <div class="input-box">
-                <label for="password">Senha</label>
-                <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-            </div>
+    <label for="senha">Senha</label>
+    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+    <p id="alerta-senha"></p>
+</div>
 
-            <div class="input-box">
-                <label for="password">Confirme sua Senha</label>
-                <input id="password" type="password" name="password" placeholder="Confirme sua senha" required>
-            </div>
+<div class="input-box">
+    <label for="senha_confirmacao">Confirme sua senha</label>
+    <input id="senha_confirmacao" type="password" name="senha_confirmacao" placeholder="Confirme sua senha" required>
+</div>
         </div>
 
-        <div class="continue-button">
-            <button><a href="#">Continuar</a> </button>
-        </div>
+        <input id="cadastrar" class="cadastrar" type="submit" value="Cadastrar" onclick="return validarSenha();">
       </form>
 
     </div>
   </div>
+
+  <script src="assets/js/cadastrar.js"></script>
 
 </body>
 
