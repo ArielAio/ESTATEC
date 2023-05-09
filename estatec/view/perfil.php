@@ -16,7 +16,7 @@ if (!$conn) {
     die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
 }
 
-// Obtém o ID do usuário armazenado na sessão
+// Obtém o RM do usuário armazenado na sessão
 session_start();
 $rm = mysqli_real_escape_string($conn, $_SESSION['rm']);
 

@@ -1,3 +1,4 @@
+
 <?php
 
 include 'conexao.php';
@@ -6,6 +7,7 @@ $buscar_cadastro = 'SELECT * FROM usuarios';
 $query_cadastros = mysqli_query($conn, $buscar_cadastro);
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

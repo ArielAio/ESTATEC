@@ -7,7 +7,7 @@
     <title>Cadastrar Estágio</title>
 </head>
 <body>
-    <form action="">
+    <form action="cadastro-estagio.php" method="POST">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome" placeholder="ex: consultório odontológico">
         
@@ -28,6 +28,9 @@
 
         <label for="data">Data de validade:</label>
         <input id="data" type="date"> 
+
+        <input id="enviar" class="enviar" type="submit" value="Enviar">
+
 </form>
 </body>
 </html>

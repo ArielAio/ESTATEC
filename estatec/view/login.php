@@ -2,6 +2,8 @@
 
 include('conexao.php');
 
+session_start(); // Inicia a sessão
+
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -31,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Inicia a sessão e redireciona para a página de cadastro
         session_start();
         $_SESSION["rm"] = $rm;
-        header("Location: perfil.php");
+        header("Location: cadastrar-estagio.php");
         exit();
     }
     else {
