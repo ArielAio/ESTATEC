@@ -15,7 +15,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastro);
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" conteant="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/cadastrar.css">
   <title>Cadastro ESTATEC</title>
 </head>

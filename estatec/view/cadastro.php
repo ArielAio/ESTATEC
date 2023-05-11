@@ -2,14 +2,6 @@
 
 include 'conexao.php';
 
-session_start(); // Inicia a sessão
-
-// Verifica se o usuário está logado
-if (!isset($_SESSION['rm'])) {
-	header('Location: login.php');
-	exit;
-}
-
 if (empty($_POST['nome']) || empty($_POST['rm']) || empty($_POST['senha']) || empty($_POST['email'])) {
     header('Location: cadastrar.php?error=1'); // redireciona para a página de cadastro com mensagem de erro
     exit();

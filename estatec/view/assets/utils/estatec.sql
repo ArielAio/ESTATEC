@@ -11,13 +11,13 @@ CREATE TABLE usuarios (
 );
 
 CREATE TABLE estagios (
-    id INT(11) NOT NULL AUTO_INCREMENT,
-    nome VARCHAR(255) NOT NULL,
-    assunto VARCHAR(255) NOT NULL,
-    requisitos VARCHAR(255) NOT NULL,
-    carga_horaria INT(11) NOT NULL,
-    principais_atividades TEXT NOT NULL,
-    salario VARCHAR(50) DEFAULT NULL,
-    data_validade DATE NOT NULL,
-    PRIMARY KEY (id)
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(255) NOT NULL,
+  assunto VARCHAR(255) NOT NULL,
+  requisitos TEXT NOT NULL,
+  carga_horaria VARCHAR(50) NOT NULL,
+  atividades TEXT NOT NULL,
+  salario VARCHAR(255) NOT NULL,
+  data_validade DATE NOT NULL,
+  PRIMARY KEY (id)
 );
