@@ -3,7 +3,7 @@
 include 'conexao.php';
 
 if (empty($_POST['nome']) || empty($_POST['rm']) || empty($_POST['senha']) || empty($_POST['email'])) {
-    header('Location: cadastrar.php?error=1'); // redireciona para a página de cadastro com mensagem de erro
+    header('Location: cadastrar.php?error=1');
     exit();
 }
 
@@ -14,19 +14,19 @@ $senha = $_POST['senha'];
 
 // Validando RM com 5 dígitos
 if (!preg_match('/^\d{5}$/', $rm)) {
-    header('Location: cadastrar.php?error=2'); // redireciona para a página de cadastro com mensagem de erro
+    header('Location: cadastrar.php?error=2');
     exit();
 }
 
 // Validando o formato do email
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header('Location: cadastrar.php?error=3'); // redireciona para a página de cadastro com mensagem de erro
+    header('Location: cadastrar.php?error=3');
     exit();
 }
 
 // Expressão regular para verificar se a senha possui pelo menos uma letra maiúscula, um dígito numérico e um caractere especial
 if (!preg_match('/^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\d\s])(?!.*\s).{8,}$/', $senha)) {
-    header('Location: cadastrar.php?error=4'); // redireciona para a página de cadastro com mensagem de erro
+    header('Location: cadastrar.php?error=4');
     exit();
 }
 
@@ -43,9 +43,12 @@ if (mysqli_num_rows($resultado) > 0) {
     exit();
 }
 
+// Criptografar a senha
+$senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
+
 // Inserir o novo registro
 $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, rm, senha) VALUES (?, ?, ?, ?)");
-$stmt->bind_param('ssss', $nome, $email, $rm, $senha);
+$stmt->bind_param('ssss', $nome, $email, $rm, $senhaCriptografada);
 if ($stmt->execute()) {
     echo "Registro inserido com sucesso!";
 }

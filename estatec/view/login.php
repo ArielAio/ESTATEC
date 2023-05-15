@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Inicia a sessão e redireciona para a página de cadastro
         session_start();
         $_SESSION["rm"] = $rm;
-        header("Location: cadastrar-estagio.php");
+        header("Location: index.php");
         exit();
     }
     else {
