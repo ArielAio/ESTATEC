@@ -1,29 +1,4 @@
 <?php
-session_start(); // Inicia a sessão
-
-// Verifica se o usuário está logado
-if (!isset($_SESSION["rm"])) {
-    header("Location: login.php");
-    exit();
-}
-
-include 'conexao.php';
-
-// Recupera o ID do estágio do parâmetro da URL
-$id = $_GET['id'];
-
-// Consulta para recuperar as informações do estágio pelo ID
-$sql = "SELECT * FROM estagios WHERE id = $id";
-$resultado = mysqli_query($conn, $sql);
-$estagio = mysqli_fetch_assoc($resultado);
-
-// Verifica se o estágio foi encontrado
-if (!$estagio) {
-    // Redireciona de volta para a página de lista de estágios se o estágio não existir
-    header("Location: estagios.php");
-    exit();
-}
-
 // Verifica se foi enviado um currículo
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['curriculo'])) {
     // Verifica se não houve erro no upload do arquivo
@@ -59,13 +34,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['curriculo'])) {
         // Envia o e-mail com o currículo anexado
         if (mail($emailDestino, 'Currículo', $mensagem, $headers)) {
             $mensagemSucesso = "O currículo foi enviado com sucesso.";
+
+            // Envia mensagem de sucesso para a tela
+            echo "<script>alert('{$mensagemSucesso}')</script>";
+
         } else {
             $mensagemErro = "Ocorreu um erro ao enviar o currículo.";
+
+            // Envia mensagem de erro para a tela
+            echo "<script>alert('{$mensagemErro}')</script>";
         }
     } else {
         $mensagemErro = "Ocorreu um erro no upload do currículo.";
+
+        // Envia mensagem de erro para a tela
+        echo "<script>alert('{$mensagemErro}')</script>";
     }
 }
+
 ?>
 
 <!DOCTYPE html>

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700&display=swap');
+
 
 *{
     margin: 0;
@@ -8,14 +11,17 @@
 body{
     background: linear-gradient(116.82deg, #E25050 0%, #E87373 100%);
     height: 100vh;
-    padding: 2rem;
+    background-repeat: inherit;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 header{
     font-family: 'Inter', sans-serif;
     color: #FFF;
     padding-top: 1.5rem;
-    padding-left: 2rem;
+    padding-right: 0%;
+    padding-left: 8%;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: row;
@@ -23,14 +29,14 @@ header{
 }
 
 header p{
+    margin-left: 4%;
     font-size: 1.8rem;
     font-weight: 700;
-    margin-left: 8rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header-links{
-    margin-left: 50%;
+    margin-left: 52%;
     display: flex;
     gap: 3.2rem;
     justify-content: center;
@@ -55,12 +61,13 @@ header p{
 }
 
 main{
-    padding-left: 10rem;
+    padding-left: 12%;
     padding-top: 2rem;
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: row;
     gap: 30%;
+    margin-bottom: 5rem;
 }
 
 main h1{
@@ -79,4 +86,38 @@ main p{
     gap: 1.5rem;
     padding-top: 8%;
     color: #FFF;
+}
+
+section{
+    background-color: #FFF;
+    padding-top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding-bottom: 4.5rem;
+    box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+section h1{
+    color: #D32222;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 3.125rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section p{
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    text-align: center;
+    font-size: 22px; 
+    font-weight: 400;
+}
+
+footer{
+    background-color: #212529;
+    padding-top: 3.5rem;
+    padding-left: 8%;
 }

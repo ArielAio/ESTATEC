@@ -79,5 +79,17 @@ mysqli_close($conn);
         </div>
         <img src="assets/images/index/img-index.svg" alt="Imagem da Página Inicial">
     </main>
+    <section>
+        <h1>SOBRE O ESTATEC</h1>
+        <p>
+            ESTATEC é um site gerenciador de estágios, criado por <br>
+            alunos da ETEC Fernandópolis, com o intuito de melhor <br>
+            organização de oportunidades de trabalho de estágios <br>
+            oferecidos pela instituição
+        </p>
+    </section>
+    <footer>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia omnis illo fugit neque voluptate officia, totam cumque tenetur illum iusto repudiandae sed nihil nisi, nam perferendis provident itaque exercitationem architecto.
+    </footer>
 </body>
 </html>

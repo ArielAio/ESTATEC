@@ -13,7 +13,7 @@ confirmacaoSenhaInput.addEventListener("input", function() {
         console.log("As senhas não correspondem");
         // Desabilita o botão de envio
         document.getElementById("cadastrar").disabled = true;
-        document.getElementById("alerta-senha").innerHTML = "<span style='color:red; font-weight:bold;'>As senhas não coincidem!</span>";
+        document.getElementById("alerta-senha").innerHTML = "<span style='color:red; font-weight:bold;'>As senhas não coincidem!<br> As senhas devem conter, ao menos, um dígito (1 a 9) e um caractere especial (*/-)</span>";
 
     } else {
 
