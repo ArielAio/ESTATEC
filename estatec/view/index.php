@@ -53,7 +53,7 @@ mysqli_close($conn);
        <p>ESTATEC</p>
        <div class="header-links">
            <a href="estagios.php">Estágios</a>
-           <a href="#">Sobre</a>
+           <a href="#sobre">Sobre</a>
            <a href="dicas.php">Dicas</a>
            <button><a href="perfil.php">PERFIL</a></button>
        </div>
@@ -79,7 +79,7 @@ mysqli_close($conn);
         </div>
         <img src="assets/images/index/img-index.svg" alt="Imagem da Página Inicial">
     </main>
-    <section>
+    <section id="sobre">
         <h1>SOBRE O ESTATEC</h1>
         <p>
             ESTATEC é um site gerenciador de estágios, criado por <br>

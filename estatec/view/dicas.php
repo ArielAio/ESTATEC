@@ -13,5 +13,6 @@
         <iframe src="https://www.youtube.com/embed/BWktHc0PCxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <a href="mailto:leandrobordignon@etec.sp.gov.br">Entre em contato</a>
+    <a class="btn-voltar" href="index.php">Voltar</a>
 </body>
 </html>

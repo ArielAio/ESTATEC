@@ -29,7 +29,7 @@ iframe {
 
 a {
     display: inline-block;
-    background-color: #cc0000;
+    background-color: #ff3344;
     color: #ffffff;
     padding: 12px 24px;
     text-decoration: none;
@@ -39,5 +39,20 @@ a {
 }
 
 a:hover {
-    background-color: #a00000;
+    background-color: #cc0011;
+}
+
+
+.btn-voltar {
+    display: inline-block;
+    background-color: #ff3344;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-voltar:hover {
+    background-color: #cc0011;
 }

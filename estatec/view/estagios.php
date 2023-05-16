@@ -24,6 +24,14 @@ $resultado = mysqli_query($conn, $sql);
     <title>Lista de Estágios</title>
 </head>
 <body>
+<header>
+       <p>ESTATEC</p>
+       <div class="header-links">
+           <a href="estagios.php">Estágios</a>
+           <a href="dicas.php">Dicas</a>
+           <button><a href="perfil.php">PERFIL</a></button>
+       </div>
+    </header>
     <h1>Lista de Estágios</h1>
     <table>
         <thead>
@@ -39,8 +47,8 @@ $resultado = mysqli_query($conn, $sql);
         </thead>
         <tbody>
             <?php while ($estagio = mysqli_fetch_assoc($resultado)) { ?>
-            <tr data-id="<?php echo $estagio['id']; ?>">
-                <td><?php echo $estagio['nome']; ?></td>
+            <tr class=fundoestagio data-id="<?php echo $estagio['id']; ?>">
+                <td ><?php echo $estagio['nome']; ?></td>
                 <td><?php echo $estagio['assunto']; ?></td>
                 <td><?php echo $estagio['requisitos']; ?></td>
                 <td><?php echo $estagio['carga_horaria']; ?></td>

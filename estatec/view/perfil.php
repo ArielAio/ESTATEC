@@ -48,8 +48,11 @@
     <!-- Exibe o nome e email do usuário na tela -->
     <h1>Perfil do Usuário</h1>
     <div>
-        <p><strong>Nome:</strong> <?php echo $nome; ?></p>
-        <p><strong>Email:</strong> <?php echo $email; ?></p>
-    </div>
+    <p><strong>Nome:</strong> <?php echo $nome; ?></p>
+    <p><strong>Email:</strong> <?php echo $email; ?></p>
+</div>
+
+<!-- Botão Voltar -->
+<a class="btn-voltar" href="index.php">Voltar</a>
 </body>
 </html>

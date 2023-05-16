@@ -33,3 +33,17 @@ p {
 strong {
     font-weight: bold;
 }
+
+.btn-voltar {
+    display: inline-block;
+    background-color: #ff3344;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-voltar:hover {
+    background-color: #cc0011;
+}
