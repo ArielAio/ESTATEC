@@ -50,6 +50,7 @@
     <div>
     <p><strong>Nome:</strong> <?php echo $nome; ?></p>
     <p><strong>Email:</strong> <?php echo $email; ?></p>
+    <p><strong>RM:</strong> <?php echo $rm; ?></p>
 </div>
 
 <!-- Botão Voltar -->

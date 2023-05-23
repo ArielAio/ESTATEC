@@ -7,6 +7,18 @@ if (!isset($_SESSION["rm"])) {
     exit();
 }
 
+// Verifica se o RM é igual a "08670"
+if ($_SESSION["rm"] !== "08670") {
+    header("Location: acesso-negado.php");
+    exit();
+}
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION["rm"])) {
+    header("Location: login.php");
+    exit();
+}
+
 include 'conexao.php';
 
 // Verifica se o formulário foi enviado
@@ -90,6 +102,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <input id="enviar" class="enviar" type="submit" value="Enviar">
 </form>
-<a href="estagios.php" class="btn">Voltar para Estágios</a>
+<a href="estagios-adm.php" class="btn">Voltar para Estágios</a>
 </body>
 </html>

@@ -28,18 +28,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
 
-    // Verifica se o usuário foi encontrado
-    if (mysqli_num_rows($result) === 1) {
+   // Verifica se o usuário foi encontrado
+if (mysqli_num_rows($result) === 1) {
+    // Obtém os dados do usuário
+    $row = mysqli_fetch_assoc($result);
+    $storedPassword = $row['password'];
+
+    // Verifica se o RM é igual a "08670" e se a senha está correta
+    if ($rm === "08670") {
+        // Inicia a sessão e redireciona para a página de administração
+        session_start();
+        $_SESSION["rm"] = $rm;
+        header("Location: index-adm.php");
+        exit();
+    } else {
         // Inicia a sessão e redireciona para a página de cadastro
         session_start();
         $_SESSION["rm"] = $rm;
         header("Location: index.php");
         exit();
     }
-    else {
-        // Exibe uma mensagem de erro caso o usuário não tenha sido encontrado
-        echo "<script>alert('RM ou senha incorretos. Tente novamente.');</script>";
-    }
+} else {
+    // Exibe uma mensagem de erro caso o usuário não tenha sido encontrado
+    echo "<script>alert('RM ou senha incorretos. Tente novamente.');</script>";
+}
 
     // Encerra a conexão com o banco de dados
     mysqli_close($conn);

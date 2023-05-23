@@ -1,42 +1,46 @@
 <?php
-
 // inclui o arquivo de conexão com o banco de dados
-include ('conexao.php');
+include('conexao.php');
 
 // inicia a sessão
 session_start();
 
-// obtém o RM do usuário armazenado na sessão e o sanitiza
-$rm = filter_var($_SESSION['rm'], FILTER_SANITIZE_NUMBER_INT);
-
-// verifica se o RM é válido
-if (!is_numeric($rm)) {
-    die("Erro: RM inválido.");
+// Verifica se o usuário está logado
+if (!isset($_SESSION["rm"])) {
+    header("Location: login.php");
+    exit();
 }
 
-// monta a consulta SQL para recuperar o nome do usuário a partir do RM
+// Verifica se o RM é igual a "08670"
+if ($_SESSION["rm"] !== "08670") {
+    header("Location: acesso-negado.php"); // Página de acesso negado
+    exit();
+}
+
+// Obtém o RM da sessão
+$rm = $_SESSION["rm"];
+
+// Monta a consulta SQL para recuperar o nome do usuário a partir do RM
 $sql = "SELECT nome FROM usuarios WHERE rm = $rm";
 
-// executa a consulta SQL
+// Executa a consulta SQL
 $resultado = mysqli_query($conn, $sql);
 
-// verifica se a consulta retornou resultados
+// Verifica se a consulta retornou resultados
 if (mysqli_num_rows($resultado) > 0) {
-    // obtém o array associativo com os resultados da consulta
+    // Obtém o array associativo com os resultados da consulta
     $linha = mysqli_fetch_assoc($resultado);
 
-    // armazena o nome do usuário em uma variável
+    // Armazena o nome do usuário em uma variável
     $nome = $linha['nome'];
 } else {
-    // se a consulta não retornou resultados, exibe uma mensagem de erro
+    // Se a consulta não retornou resultados, exibe uma mensagem de erro
     echo "Erro: usuário não encontrado.";
 }
 
-// fecha a conexão com o banco de dados
+// Fecha a conexão com o banco de dados
 mysqli_close($conn);
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -51,9 +55,9 @@ mysqli_close($conn);
 </head>
 <body>
     <header>
-       <a class="header-logo" href="index.php">ESTATEC</a>
+       <a class="header-logo" href="index-adm.php">ESTATEC</a>
        <div class="header-links">
-           <a href="estagios.php">Estágios</a>
+           <a href="estagios-adm.php">Estágios</a>
            <a href="#sobre">Sobre</a>
            <a href="dicas.php">Dicas</a>
            <button><a href="perfil.php">PERFIL</a></button>

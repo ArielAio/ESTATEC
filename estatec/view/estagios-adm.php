@@ -7,6 +7,12 @@ if (!isset($_SESSION["rm"])) {
     exit();
 }
 
+// Verifica se o RM é igual a "08670"
+if ($_SESSION["rm"] !== "08670") {
+    header("Location: acesso-negado.php"); // Página de acesso negado
+    exit();
+}
+
 include 'conexao.php';
 
 // Consulta para recuperar todos os estágios cadastrados no banco de dados
@@ -60,6 +66,7 @@ $resultado = mysqli_query($conn, $sql);
         </tbody>
         
     </table>
+    <a href="cadastrar-estagio.php" class="button">CADASTRAR ESTÁGIO</a>
 
     <script src="assets/js/estagios.js"></script>
 

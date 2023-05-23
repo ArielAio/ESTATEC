@@ -1,5 +1,18 @@
 <?php
+
 session_start(); // Inicia a sessão
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION["rm"])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Verifica se o RM é igual a "08670"
+if ($_SESSION["rm"] !== "08670") {
+    header("Location: acesso-negado.php");
+    exit();
+}
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION["rm"])) {
@@ -47,7 +60,7 @@ if (!$estagio) {
         <p><strong>Data de Validade:</strong> <?php echo $estagio['data_validade']; ?></p>
     </div>
 
-    <a href="<?= ($_SESSION["rm"] == "08670") ? 'estagios-adm.php' : 'estagios.php' ?>" class="button">Voltar para a Lista de Estágios</a>
+    <a href="estagios.php" class="button">Voltar para a Lista de Estágios</a>
 
     <a href="enviar_curriculo.php?id=<?php echo $id; ?>" class="button">Enviar Currículo</a>
 
