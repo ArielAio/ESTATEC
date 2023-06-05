@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+body{
+    background: linear-gradient(116.82deg, #E25050 0%, #E87373 100%);
+    height: 98vh;
+    margin: 0;
+  }
+  
+  header{
+    font-family: 'Inter', sans-serif;
+    color: #FFF;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-logo{
+    margin-left: 4%;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    text-decoration: none;
+}
+
+.header-links{
+    margin-left: 52%;
+    display: flex;
+    gap: 3.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-links a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-links a:hover{
+    transform: translateY(-1.5px);
+}
+
+.header-links button{
+    background-color: #D32222;
+    border: none;
+    width: 110px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.header-links button{
+    transform: translateY(-4px);
+}
+  
+  .fundoestagio{
+    background-color: #FFF;
+  }
+
+main{
+  height: 95vh;
+  width: 100vw;
+}
+
+table {
+  width: 85%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 8px;
+}
+
+thead {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #D32222;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+
+tbody td {
+  padding: 12px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 3rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button {
+  display: inline-block;
+  background-color: #D32222;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-left: 50rem;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #b71c1c;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+  
+  

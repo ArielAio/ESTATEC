@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E25050;
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B71E1E;
+    padding: 1rem;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.form-header {
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 20rem;
+}
+
+.btn-voltar {
+    display: flex;
+    align-items: center;
+}
+
+.btn-voltar button {
+    border: none;
+    background-color: #B71E1E;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 5vw;
+    height: 3vh;
+}
+
+.btn-voltar button:hover {
+    background-color: #851818;
+    border-radius: 8px;
+}
+
+.btn-voltar button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #B71E1E;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin-bottom: 20rem;
+    font-size: 20px;
+}
+
+span{
+    font-weight: bold;
+}
+
+.btn-sair{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-sair button{
+    border: none;
+    background-color: #B71E1E;
+    width: 8vw;
+    height: 4vh;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-sair button:hover {
+    background-color: #851818;
+    border-radius: 7px;
+}
+
+.btn-sair button a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+}
